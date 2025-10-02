@@ -1,4 +1,4 @@
-# InfiniHealth Application - Engagement Flow Documentation
+# InfiniHealth Application
 
 This document outlines the user engagement flow of the InfiniHealth Godot application, based on an analysis of its scene (`.tscn`) and script (`.gd`) files.
 
