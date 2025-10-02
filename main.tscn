@@ -1,0 +1,217 @@
+[gd_scene load_steps=18 format=3 uid="uid://cbrt5cmixcy1x"]
+
+[ext_resource type="FontFile" uid="uid://epxobldh01i" path="res://font.ttf" id="1_ig7tw"]
+[ext_resource type="Script" uid="uid://cjomalbbwk4to" path="res://change_steps.gd" id="2_0xm2m"]
+[ext_resource type="Texture2D" uid="uid://dswf6qoho5fw7" path="res://user.png" id="3_1bvp3"]
+[ext_resource type="Script" uid="uid://crunk8t2rekkj" path="res://profile_button.gd" id="4_lquwl"]
+[ext_resource type="Texture2D" uid="uid://dcwuvwksg3cmy" path="res://home.png" id="5_7mycd"]
+[ext_resource type="Script" uid="uid://lglrtgp44i16" path="res://home_button.gd" id="6_272bh"]
+[ext_resource type="Script" uid="uid://berymbdinfyb8" path="res://water_screen.gd" id="7_kek77"]
+[ext_resource type="Texture2D" uid="uid://cofosw7vs514a" path="res://water_glass.png" id="8_4c57u"]
+[ext_resource type="Script" uid="uid://56tjoly2nyrq" path="res://diet_button.gd" id="9_4c57u"]
+[ext_resource type="Texture2D" uid="uid://pa8o0ak13s1g" path="res://leaf2.png" id="9_efxa6"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7dm0k"]
+bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ig7tw"]
+content_margin_left = 55.0
+content_margin_top = 55.0
+bg_color = Color(0.925769, 0.926063, 0.919233, 1)
+corner_radius_top_left = 100
+corner_radius_top_right = 100
+corner_radius_bottom_right = 100
+corner_radius_bottom_left = 100
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0xm2m"]
+bg_color = Color(0.294861, 0.0775322, 0.878247, 1)
+corner_radius_top_left = 65
+corner_radius_top_right = 65
+corner_radius_bottom_right = 65
+corner_radius_bottom_left = 65
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4c57u"]
+bg_color = Color(0, 0.505882, 0.631373, 1)
+border_width_bottom = 20
+border_color = Color(0, 0.32549, 0.32549, 1)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kek77"]
+bg_color = Color(2.98411e-06, 0.506289, 0.632276, 1)
+border_width_bottom = 20
+border_color = Color(0, 0.323582, 0.323582, 1)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7mycd"]
+bg_color = Color(0.0327016, 0.703566, 0.964491, 1)
+border_width_bottom = 20
+border_color = Color(0.00471402, 0.513889, 0.712392, 1)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dg77c"]
+bg_color = Color(0.938874, 0.938874, 1.54018e-06, 1)
+border_width_bottom = 20
+border_color = Color(0.8, 0.8, 0, 1)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+
+[node name="MainScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MainPanel" type="Panel" parent="."]
+layout_mode = 0
+offset_right = 1080.0
+offset_bottom = 1920.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_7dm0k")
+
+[node name="TextEdit" type="TextEdit" parent="MainPanel"]
+layout_mode = 0
+offset_left = 54.0
+offset_top = 56.0
+offset_right = 996.0
+offset_bottom = 208.0
+theme_override_colors/font_placeholder_color = Color(0.697578, 0.697578, 0.697578, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 60
+theme_override_styles/normal = SubResource("StyleBoxFlat_ig7tw")
+placeholder_text = "What is on your mind today?"
+
+[node name="Steps" type="Panel" parent="MainPanel"]
+layout_mode = 0
+offset_left = 103.0
+offset_top = 639.0
+offset_right = 942.0
+offset_bottom = 1109.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_0xm2m")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MainPanel/Steps"]
+layout_mode = 0
+offset_left = 78.0
+offset_top = 50.0
+offset_right = 831.0
+offset_bottom = 325.0
+theme_override_fonts/normal_font = ExtResource("1_ig7tw")
+theme_override_font_sizes/normal_font_size = 150
+text = "10,350 Steps"
+script = ExtResource("2_0xm2m")
+
+[node name="Timer" type="Timer" parent="MainPanel/Steps/RichTextLabel"]
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="MainPanel/Steps"]
+layout_mode = 0
+offset_left = 127.0
+offset_top = 262.0
+offset_right = 927.0
+offset_bottom = 512.0
+theme_override_fonts/normal_font = ExtResource("1_ig7tw")
+theme_override_font_sizes/normal_font_size = 100
+text = "You Nailed It! 🔥"
+
+[node name="ProfileButton" type="TextureButton" parent="MainPanel"]
+layout_mode = 0
+offset_left = 793.0
+offset_top = 1745.0
+offset_right = 1305.0
+offset_bottom = 2257.0
+scale = Vector2(0.3, 0.3)
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("3_1bvp3")
+stretch_mode = 4
+script = ExtResource("4_lquwl")
+
+[node name="HomeButton" type="TextureButton" parent="MainPanel"]
+layout_mode = 0
+offset_left = 127.0
+offset_top = 1733.0
+offset_right = 639.0
+offset_bottom = 2245.0
+scale = Vector2(0.3, 0.3)
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("5_7mycd")
+script = ExtResource("6_272bh")
+
+[node name="Water" type="Button" parent="MainPanel"]
+layout_mode = 0
+offset_left = 146.0
+offset_top = 1187.0
+offset_right = 507.0
+offset_bottom = 1403.0
+theme_override_styles/hover = SubResource("StyleBoxFlat_4c57u")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_kek77")
+theme_override_styles/normal = SubResource("StyleBoxFlat_7mycd")
+script = ExtResource("7_kek77")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MainPanel/Water"]
+layout_mode = 0
+offset_left = 62.0
+offset_top = 8.0
+offset_right = 332.0
+offset_bottom = 139.0
+mouse_filter = 1
+theme_override_fonts/normal_font = ExtResource("1_ig7tw")
+theme_override_font_sizes/normal_font_size = 70
+text = "Hydration"
+
+[node name="TextureRect" type="TextureRect" parent="MainPanel/Water"]
+layout_mode = 0
+offset_left = 123.0
+offset_top = 93.0
+offset_right = 379.0
+offset_bottom = 349.0
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("8_4c57u")
+stretch_mode = 4
+
+[node name="Water2" type="Button" parent="MainPanel"]
+layout_mode = 0
+offset_left = 553.0
+offset_top = 1189.0
+offset_right = 914.0
+offset_bottom = 1405.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_dg77c")
+script = ExtResource("9_4c57u")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MainPanel/Water2"]
+layout_mode = 0
+offset_left = 62.0
+offset_top = 8.0
+offset_right = 332.0
+offset_bottom = 139.0
+mouse_filter = 1
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("1_ig7tw")
+theme_override_font_sizes/normal_font_size = 70
+text = "Diet Plan"
+
+[node name="TextureRect" type="TextureRect" parent="MainPanel/Water2"]
+layout_mode = 0
+offset_left = 117.0
+offset_top = 93.0
+offset_right = 629.0
+offset_bottom = 605.0
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("9_efxa6")
+stretch_mode = 4
+
+[connection signal="timeout" from="MainPanel/Steps/RichTextLabel/Timer" to="MainPanel/Steps/RichTextLabel" method="_on_timer_timeout"]
+[connection signal="pressed" from="MainPanel/ProfileButton" to="MainPanel/Steps/RichTextLabel" method="_on_texture_button_pressed"]
+[connection signal="pressed" from="MainPanel/ProfileButton" to="MainPanel/ProfileButton" method="_on_pressed"]
+[connection signal="pressed" from="MainPanel/HomeButton" to="MainPanel/HomeButton" method="_on_pressed"]
+[connection signal="pressed" from="MainPanel/Water" to="MainPanel/Water" method="_on_pressed"]
+[connection signal="pressed" from="MainPanel/Water2" to="MainPanel/Water2" method="_on_pressed"]

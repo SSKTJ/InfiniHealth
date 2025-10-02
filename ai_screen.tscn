@@ -1,0 +1,43 @@
+[gd_scene load_steps=4 format=3 uid="uid://bsbhbevvj2jfr"]
+
+[ext_resource type="Script" uid="uid://dea27dfi5887a" path="res://ai_screen.gd" id="1_xrmpu"]
+[ext_resource type="Texture2D" uid="uid://f3ms6v6a1qhd" path="res://send.jpg" id="2_t4mux"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gie8o"]
+bg_color = Color(1, 1, 1, 1)
+
+[node name="AIScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_xrmpu")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+layout_mode = 0
+offset_right = 1080.0
+offset_bottom = 1920.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_gie8o")
+
+[node name="ChatBox" type="VBoxContainer" parent="ScrollContainer"]
+layout_mode = 2
+
+[node name="UserInput" type="LineEdit" parent="."]
+layout_mode = 2
+offset_left = 60.0
+offset_top = 1759.0
+offset_right = 877.0
+offset_bottom = 1879.0
+
+[node name="SendButton" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 891.0
+offset_top = 1738.0
+offset_right = 1503.0
+offset_bottom = 2350.0
+scale = Vector2(0.25, 0.25)
+texture_normal = ExtResource("2_t4mux")
+
+[node name="HTTPRequest" type="HTTPRequest" parent="."]

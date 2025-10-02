@@ -1,0 +1,76 @@
+[gd_scene load_steps=5 format=3 uid="uid://c8c4ad5a0jx6n"]
+
+[ext_resource type="FontFile" uid="uid://d1v2ehakima2f" path="res://PatrickHand-Regular.ttf" id="1_3n56f"]
+[ext_resource type="Texture2D" uid="uid://kcs3ublngstf" path="res://logo.png" id="2_3n56f"]
+[ext_resource type="Script" uid="uid://xocgj2f7iwow" path="res://signin.gd" id="3_xlo4h"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3n56f"]
+bg_color = Color(3.27289e-06, 0.657038, 0.859756, 1)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+
+[node name="Panel" type="Panel"]
+custom_minimum_size = Vector2(1080, 1920)
+offset_left = 5.0
+offset_top = -6.0
+offset_right = 1085.0
+offset_bottom = 1914.0
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 260.0
+offset_top = 674.0
+offset_right = 572.0
+offset_bottom = 743.0
+theme_override_fonts/font = ExtResource("1_3n56f")
+theme_override_font_sizes/font_size = 50
+text = "Username"
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 256.0
+offset_top = 918.0
+offset_right = 568.0
+offset_bottom = 987.0
+theme_override_fonts/font = ExtResource("1_3n56f")
+theme_override_font_sizes/font_size = 50
+text = "Password"
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 273.0
+offset_top = 207.0
+offset_right = 849.0
+offset_bottom = 630.0
+texture = ExtResource("2_3n56f")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 436.0
+offset_top = 1176.0
+offset_right = 644.0
+offset_bottom = 1287.0
+theme_override_colors/icon_normal_color = Color(0.333333, 1, 1, 1)
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_3n56f")
+text = "Sign In"
+script = ExtResource("3_xlo4h")
+
+[node name="LineEdit" type="LineEdit" parent="Button"]
+layout_mode = 0
+offset_left = -184.0
+offset_top = -185.0
+offset_right = 395.0
+offset_bottom = -122.0
+
+[node name="LineEdit2" type="LineEdit" parent="Button"]
+z_index = 69
+layout_mode = 0
+offset_left = -183.0
+offset_top = -423.0
+offset_right = 408.0
+offset_bottom = -356.0
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
