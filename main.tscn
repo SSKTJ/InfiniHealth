@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://cbrt5cmixcy1x"]
+[gd_scene load_steps=20 format=3 uid="uid://cbrt5cmixcy1x"]
 
 [ext_resource type="FontFile" uid="uid://epxobldh01i" path="res://font.ttf" id="1_ig7tw"]
 [ext_resource type="Script" uid="uid://cjomalbbwk4to" path="res://change_steps.gd" id="2_0xm2m"]
@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://cofosw7vs514a" path="res://water_glass.png" id="8_4c57u"]
 [ext_resource type="Script" uid="uid://56tjoly2nyrq" path="res://diet_button.gd" id="9_4c57u"]
 [ext_resource type="Texture2D" uid="uid://pa8o0ak13s1g" path="res://leaf2.png" id="9_efxa6"]
+[ext_resource type="Script" uid="uid://y84gc5l1eotd" path="res://AI.gd" id="11_efxa6"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7dm0k"]
 bg_color = Color(1, 1, 1, 1)
@@ -30,10 +31,10 @@ corner_radius_top_right = 65
 corner_radius_bottom_right = 65
 corner_radius_bottom_left = 65
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4c57u"]
-bg_color = Color(0, 0.505882, 0.631373, 1)
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7mycd"]
+bg_color = Color(0.0327016, 0.703566, 0.964491, 1)
 border_width_bottom = 20
-border_color = Color(0, 0.32549, 0.32549, 1)
+border_color = Color(0.00471402, 0.513889, 0.712392, 1)
 corner_radius_top_left = 50
 corner_radius_top_right = 50
 corner_radius_bottom_right = 50
@@ -48,10 +49,10 @@ corner_radius_top_right = 50
 corner_radius_bottom_right = 50
 corner_radius_bottom_left = 50
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7mycd"]
-bg_color = Color(0.0327016, 0.703566, 0.964491, 1)
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4c57u"]
+bg_color = Color(0, 0.505882, 0.631373, 1)
 border_width_bottom = 20
-border_color = Color(0.00471402, 0.513889, 0.712392, 1)
+border_color = Color(0, 0.32549, 0.32549, 1)
 corner_radius_top_left = 50
 corner_radius_top_right = 50
 corner_radius_bottom_right = 50
@@ -61,6 +62,13 @@ corner_radius_bottom_left = 50
 bg_color = Color(0.938874, 0.938874, 1.54018e-06, 1)
 border_width_bottom = 20
 border_color = Color(0.8, 0.8, 0, 1)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ycdy4"]
+bg_color = Color(0, 0.6, 0.6, 1)
 corner_radius_top_left = 50
 corner_radius_top_right = 50
 corner_radius_bottom_right = 50
@@ -86,8 +94,8 @@ offset_left = 54.0
 offset_top = 56.0
 offset_right = 996.0
 offset_bottom = 208.0
-theme_override_colors/font_placeholder_color = Color(0.697578, 0.697578, 0.697578, 1)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_placeholder_color = Color(0.697578, 0.697578, 0.697578, 1)
 theme_override_font_sizes/font_size = 60
 theme_override_styles/normal = SubResource("StyleBoxFlat_ig7tw")
 placeholder_text = "What is on your mind today?"
@@ -152,9 +160,9 @@ offset_left = 146.0
 offset_top = 1187.0
 offset_right = 507.0
 offset_bottom = 1403.0
-theme_override_styles/hover = SubResource("StyleBoxFlat_4c57u")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_kek77")
 theme_override_styles/normal = SubResource("StyleBoxFlat_7mycd")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_kek77")
+theme_override_styles/hover = SubResource("StyleBoxFlat_4c57u")
 script = ExtResource("7_kek77")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="MainPanel/Water"]
@@ -209,9 +217,22 @@ scale = Vector2(0.2, 0.2)
 texture = ExtResource("9_efxa6")
 stretch_mode = 4
 
+[node name="Button" type="Button" parent="MainPanel"]
+layout_mode = 0
+offset_left = 210.0
+offset_top = 319.0
+offset_right = 830.0
+offset_bottom = 547.0
+theme_override_fonts/font = ExtResource("1_ig7tw")
+theme_override_font_sizes/font_size = 70
+theme_override_styles/normal = SubResource("StyleBoxFlat_ycdy4")
+text = "Try Out InfiniCoach"
+script = ExtResource("11_efxa6")
+
 [connection signal="timeout" from="MainPanel/Steps/RichTextLabel/Timer" to="MainPanel/Steps/RichTextLabel" method="_on_timer_timeout"]
 [connection signal="pressed" from="MainPanel/ProfileButton" to="MainPanel/Steps/RichTextLabel" method="_on_texture_button_pressed"]
 [connection signal="pressed" from="MainPanel/ProfileButton" to="MainPanel/ProfileButton" method="_on_pressed"]
 [connection signal="pressed" from="MainPanel/HomeButton" to="MainPanel/HomeButton" method="_on_pressed"]
 [connection signal="pressed" from="MainPanel/Water" to="MainPanel/Water" method="_on_pressed"]
 [connection signal="pressed" from="MainPanel/Water2" to="MainPanel/Water2" method="_on_pressed"]
+[connection signal="pressed" from="MainPanel/Button" to="MainPanel/Button" method="_on_pressed"]

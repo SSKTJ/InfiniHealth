@@ -1,0 +1,17 @@
+63f7b34db8d8cdea90c76aacccf841ec
+::res://::1759372779
+Gemini_Generated_Image_6796lt6796lt6796-removebg-preview.png::CompressedTexture2D::2488210886126133343::1759372779::1759372779::1::::<><><>0<>0<>7cffaf966c5512d9b72ed164b381f64f<>res://.godot/imported/Gemini_Generated_Image_6796lt6796lt6796-removebg-preview.png-022d4097dd7e9a7ec70954993884ab69.ctex::
+icon.svg::CompressedTexture2D::7301692012398504028::1759355352::1759355362::1::::<><><>0<>0<>2412328f653d7a23d5e79b8773696ada<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
+control.tscn::PackedScene::5287350237946467576::1759367450::0::1::::<><><>0<>0<><>::uid://c5eya72117ro1::::res://Whisk_48f325b02d848e7a12e4c73f0e25cd2eeg.png
+PatrickHand-Regular.ttf::FontFile::7148116546750016033::1759361791::1759361791::1::::<><><>0<>0<>8be5aa8f942fd94afc9aa1b8ff369fd8<>res://.godot/imported/PatrickHand-Regular.ttf-b9e493bb1dd9e6fe613eef2abaf966d7.fontdata::
+pngtree-white-circle-background-png-image_2975665-removebg-preview.png::CompressedTexture2D::1452470634853701838::1759360859::1759360859::1::::<><><>0<>0<>f55954c4086418bc9993d86df8c1c8a3<>res://.godot/imported/pngtree-white-circle-background-png-image_2975665-removebg-preview.png-5cb19602d731912ddb45de0d5d2942a9.ctex::
+Profile.tscn::PackedScene::5842922504523415331::1759364935::0::1::::<><><>0<>0<><>::uid://uxt8j5n7n67k::::res://pngtree-white-circle-background-png-image_2975665-removebg-preview.png<>uid://c83uo2cad0q0x::::res://PatrickHand-Regular.ttf
+diet_selection_page.tscn::PackedScene::8380969550367840828::1759367614::0::1::::<><><>0<>0<><>::uid://c83uo2cad0q0x::::res://PatrickHand-Regular.ttf<>uid://vvmmuy87dphn::::res://vegan_button.gd
+oats.gd::GDScript::7322341012426881158::1759372302::0::1::::<>Panel<><>0<>0<><>::
+avocado.gd::GDScript::5294022209444575587::1759372302::0::1::::<>Panel<><>0<>0<><>::
+pancake.gd::GDScript::26462093364394424::1759372417::0::1::::<>Panel<><>0<>0<><>::
+smoothie.gd::GDScript::4063648740358847388::1759372317::0::1::::<>Panel<><>0<>0<><>::
+Vegan.png::CompressedTexture2D::7587840356931124131::1759369719::1759369719::1::::<><><>0<>0<>c5c51ca2ae3a8c9c802d8c7e8a79bdf4<>res://.godot/imported/Vegan.png-33d6fe37c60e33f2bfd4c4a50910bb29.ctex::
+vegan.tscn::PackedScene::7489081781248522837::1759372568::0::1::::<><><>0<>0<><>::uid://c83uo2cad0q0x::::res://PatrickHand-Regular.ttf<>uid://dck85e8tm6bi1::::res://oats.gd<>uid://dgduvfejv4v1d::::res://Vegan.png<>uid://chop1i2nlkkn8::::res://avocado.gd<>uid://m23d2abnyxs::::res://pancake.gd<>uid://bx5px3n7uy4dc::::res://smoothie.gd
+vegan_button.gd::GDScript::1518068771758567791::1759367446::0::1::::<>Panel<><>0<>0<><>::
+Whisk_48f325b02d848e7a12e4c73f0e25cd2eeg.png::CompressedTexture2D::6888223119044075354::1759356785::1759356785::1::::<><><>0<>0<>1afeab15f9a048ea9a871a917ec4e0a8<>res://.godot/imported/Whisk_48f325b02d848e7a12e4c73f0e25cd2eeg.png-4c3efbe4bbfc5d23b6a3af3a167d61b9.ctex::

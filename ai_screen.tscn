@@ -1,7 +1,12 @@
-[gd_scene load_steps=4 format=3 uid="uid://bsbhbevvj2jfr"]
+[gd_scene load_steps=9 format=3 uid="uid://o0f5a1wekbf8"]
 
 [ext_resource type="Script" uid="uid://dea27dfi5887a" path="res://ai_screen.gd" id="1_xrmpu"]
+[ext_resource type="FontFile" uid="uid://d1v2ehakima2f" path="res://PatrickHand-Regular.ttf" id="2_gie8o"]
 [ext_resource type="Texture2D" uid="uid://f3ms6v6a1qhd" path="res://send.jpg" id="2_t4mux"]
+[ext_resource type="Texture2D" uid="uid://dswf6qoho5fw7" path="res://user.png" id="4_g10yg"]
+[ext_resource type="Script" uid="uid://crunk8t2rekkj" path="res://profile_button.gd" id="5_yhcft"]
+[ext_resource type="Texture2D" uid="uid://dcwuvwksg3cmy" path="res://home.png" id="6_xxh24"]
+[ext_resource type="Script" uid="uid://lglrtgp44i16" path="res://home_button.gd" id="7_4cf3w"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gie8o"]
 bg_color = Color(1, 1, 1, 1)
@@ -25,19 +30,57 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_gie8o")
 layout_mode = 2
 
 [node name="UserInput" type="LineEdit" parent="."]
-layout_mode = 2
-offset_left = 60.0
-offset_top = 1759.0
-offset_right = 877.0
-offset_bottom = 1879.0
+layout_mode = 0
+offset_left = 70.0
+offset_top = 1593.0
+offset_right = 887.0
+offset_bottom = 1713.0
+theme_override_fonts/font = ExtResource("2_gie8o")
+theme_override_font_sizes/font_size = 50
+placeholder_text = "Type Your Message here "
 
 [node name="SendButton" type="TextureButton" parent="."]
 layout_mode = 0
-offset_left = 891.0
-offset_top = 1738.0
-offset_right = 1503.0
-offset_bottom = 2350.0
+offset_left = 898.0
+offset_top = 1575.0
+offset_right = 1510.0
+offset_bottom = 2187.0
 scale = Vector2(0.25, 0.25)
 texture_normal = ExtResource("2_t4mux")
 
 [node name="HTTPRequest" type="HTTPRequest" parent="."]
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_right = 1075.0
+offset_bottom = 1101.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 50
+text = "Welcome to InfiniCoach!"
+
+[node name="ProfileButton" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 793.0
+offset_top = 1745.0
+offset_right = 1305.0
+offset_bottom = 2257.0
+scale = Vector2(0.3, 0.3)
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("4_g10yg")
+stretch_mode = 4
+script = ExtResource("5_yhcft")
+
+[node name="HomeButton" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 127.0
+offset_top = 1733.0
+offset_right = 639.0
+offset_bottom = 2245.0
+scale = Vector2(0.3, 0.3)
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("6_xxh24")
+script = ExtResource("7_4cf3w")
+
+[connection signal="pressed" from="ProfileButton" to="ProfileButton" method="_on_pressed"]
+[connection signal="pressed" from="HomeButton" to="HomeButton" method="_on_pressed"]
