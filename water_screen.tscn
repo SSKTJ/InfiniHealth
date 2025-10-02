@@ -130,6 +130,7 @@ theme_override_styles/background = SubResource("StyleBoxFlat_fdg0o")
 theme_override_styles/fill = SubResource("StyleBoxFlat_lajfa")
 
 [node name="ProfileButton" type="TextureButton" parent="MainPanel"]
+layout_mode = 0
 offset_left = 793.0
 offset_top = 1745.0
 offset_right = 1305.0
@@ -141,6 +142,7 @@ stretch_mode = 4
 script = ExtResource("5_qgr8x")
 
 [node name="HomeButton" type="TextureButton" parent="MainPanel"]
+layout_mode = 0
 offset_left = 127.0
 offset_top = 1733.0
 offset_right = 639.0

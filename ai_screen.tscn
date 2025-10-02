@@ -1,15 +1,23 @@
-[gd_scene load_steps=9 format=3 uid="uid://o0f5a1wekbf8"]
+[gd_scene load_steps=11 format=3 uid="uid://o0f5a1wekbf8"]
 
 [ext_resource type="Script" uid="uid://dea27dfi5887a" path="res://ai_screen.gd" id="1_xrmpu"]
 [ext_resource type="FontFile" uid="uid://d1v2ehakima2f" path="res://PatrickHand-Regular.ttf" id="2_gie8o"]
 [ext_resource type="Texture2D" uid="uid://f3ms6v6a1qhd" path="res://send.jpg" id="2_t4mux"]
 [ext_resource type="Texture2D" uid="uid://dswf6qoho5fw7" path="res://user.png" id="4_g10yg"]
+[ext_resource type="FontFile" uid="uid://epxobldh01i" path="res://font.ttf" id="4_yhcft"]
 [ext_resource type="Script" uid="uid://crunk8t2rekkj" path="res://profile_button.gd" id="5_yhcft"]
 [ext_resource type="Texture2D" uid="uid://dcwuvwksg3cmy" path="res://home.png" id="6_xxh24"]
 [ext_resource type="Script" uid="uid://lglrtgp44i16" path="res://home_button.gd" id="7_4cf3w"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gie8o"]
 bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xxh24"]
+bg_color = Color(0.815389, 0.815389, 0.815389, 1)
+corner_radius_top_left = 100
+corner_radius_top_right = 100
+corner_radius_bottom_right = 100
+corner_radius_bottom_left = 100
 
 [node name="AIScreen" type="Control"]
 layout_mode = 3
@@ -35,8 +43,11 @@ offset_left = 70.0
 offset_top = 1593.0
 offset_right = 887.0
 offset_bottom = 1713.0
+theme_override_colors/font_placeholder_color = Color(0.617455, 0.617455, 0.617455, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_gie8o")
 theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_xxh24")
 placeholder_text = "Type Your Message here "
 
 [node name="SendButton" type="TextureButton" parent="."]
@@ -52,10 +63,13 @@ texture_normal = ExtResource("2_t4mux")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
 layout_mode = 0
-offset_right = 1075.0
-offset_bottom = 1101.0
+offset_left = 56.0
+offset_top = 26.0
+offset_right = 1042.0
+offset_bottom = 1556.0
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("4_yhcft")
 theme_override_font_sizes/normal_font_size = 50
 text = "Welcome to InfiniCoach!"
 

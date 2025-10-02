@@ -31,10 +31,10 @@ corner_radius_top_right = 65
 corner_radius_bottom_right = 65
 corner_radius_bottom_left = 65
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7mycd"]
-bg_color = Color(0.0327016, 0.703566, 0.964491, 1)
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4c57u"]
+bg_color = Color(0, 0.505882, 0.631373, 1)
 border_width_bottom = 20
-border_color = Color(0.00471402, 0.513889, 0.712392, 1)
+border_color = Color(0, 0.32549, 0.32549, 1)
 corner_radius_top_left = 50
 corner_radius_top_right = 50
 corner_radius_bottom_right = 50
@@ -49,10 +49,10 @@ corner_radius_top_right = 50
 corner_radius_bottom_right = 50
 corner_radius_bottom_left = 50
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4c57u"]
-bg_color = Color(0, 0.505882, 0.631373, 1)
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7mycd"]
+bg_color = Color(0.0327016, 0.703566, 0.964491, 1)
 border_width_bottom = 20
-border_color = Color(0, 0.32549, 0.32549, 1)
+border_color = Color(0.00471402, 0.513889, 0.712392, 1)
 corner_radius_top_left = 50
 corner_radius_top_right = 50
 corner_radius_bottom_right = 50
@@ -94,8 +94,8 @@ offset_left = 54.0
 offset_top = 56.0
 offset_right = 996.0
 offset_bottom = 208.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_placeholder_color = Color(0.697578, 0.697578, 0.697578, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 60
 theme_override_styles/normal = SubResource("StyleBoxFlat_ig7tw")
 placeholder_text = "What is on your mind today?"
@@ -160,9 +160,9 @@ offset_left = 146.0
 offset_top = 1187.0
 offset_right = 507.0
 offset_bottom = 1403.0
-theme_override_styles/normal = SubResource("StyleBoxFlat_7mycd")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_kek77")
 theme_override_styles/hover = SubResource("StyleBoxFlat_4c57u")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_kek77")
+theme_override_styles/normal = SubResource("StyleBoxFlat_7mycd")
 script = ExtResource("7_kek77")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="MainPanel/Water"]

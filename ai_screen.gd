@@ -414,6 +414,7 @@ func _ready():
 # --- User Input Handlers ---
 func _on_send_pressed():
 	var message = user_input.text.strip_edges()
+	$RichTextLabel.text += '\n \n' + "You: " + message
 	if message.is_empty():
 		return
 		
@@ -462,7 +463,7 @@ func _on_HTTPRequest_request_completed(_result: int, response_code: int, _header
 	print("API Request Completed. HTTP Code: " + str(response_code))
 	print(data)
 	
-	$RichTextLabel.text += '\n \n' + data['candidates'][0]['content']['parts'][0]['text']
+	$RichTextLabel.text += '\n \n' + "AI: " + data['candidates'][0]['content']['parts'][0]['text']
 	
 	if response_code == 200 and data is Dictionary:
 		if data.has("candidates") and data["candidates"].size() > 0:

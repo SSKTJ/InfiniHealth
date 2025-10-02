@@ -234,6 +234,7 @@ offset_bottom = 56.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_wjafo")
 
 [node name="HomeButton" type="TextureButton" parent="."]
+layout_mode = 0
 offset_left = 93.0
 offset_top = 1740.0
 offset_right = 605.0
