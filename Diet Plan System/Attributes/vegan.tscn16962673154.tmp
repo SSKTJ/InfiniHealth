@@ -1,0 +1,225 @@
+[gd_scene load_steps=11 format=3 uid="uid://dex1c2xexn4cf"]
+
+[ext_resource type="FontFile" uid="uid://c83uo2cad0q0x" path="res://PatrickHand-Regular.ttf" id="1_088ok"]
+[ext_resource type="Script" uid="uid://dck85e8tm6bi1" path="res://oats.gd" id="2_10u5y"]
+[ext_resource type="Texture2D" uid="uid://dgduvfejv4v1d" path="res://Vegan.png" id="2_yi2bu"]
+[ext_resource type="Script" uid="uid://chop1i2nlkkn8" path="res://avocado.gd" id="3_jknq3"]
+[ext_resource type="Script" uid="uid://m23d2abnyxs" path="res://pancake.gd" id="4_44wgq"]
+[ext_resource type="Script" uid="uid://bx5px3n7uy4dc" path="res://smoothie.gd" id="5_p0n7o"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dh7n5"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yi2bu"]
+bg_color = Color(0.47843137, 0.6, 0.6, 1)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h32a3"]
+bg_color = Color(0.39488593, 0.608924, 0.8893244, 1)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j6bm8"]
+bg_color = Color(0.7529412, 0.6, 0.6, 1)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+
+[node name="Panel" type="Panel"]
+z_index = -10
+custom_minimum_size = Vector2(1080, 1920)
+offset_top = -1.0
+offset_right = 1080.0
+offset_bottom = 1919.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_dh7n5")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 268.0
+offset_top = 134.0
+offset_right = 717.0
+offset_bottom = 201.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_yi2bu")
+
+[node name="Label" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 162.0
+offset_top = -4.0
+offset_right = 289.0
+offset_bottom = 65.0
+theme_override_colors/font_color = Color(0.92941177, 1, 1, 1)
+theme_override_fonts/font = ExtResource("1_088ok")
+theme_override_font_sizes/font_size = 50
+text = "Vegan"
+
+[node name="Breakfast" type="Panel" parent="."]
+z_index = 3
+layout_mode = 0
+offset_left = 28.0
+offset_top = 439.0
+offset_right = 603.0
+offset_bottom = 516.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_h32a3")
+
+[node name="Label" type="Label" parent="Breakfast"]
+layout_mode = 0
+offset_left = 76.0
+offset_top = 8.0
+offset_right = 224.0
+offset_bottom = 63.0
+theme_override_colors/font_color = Color(0.8627451, 1, 1, 1)
+theme_override_fonts/font = ExtResource("1_088ok")
+theme_override_font_sizes/font_size = 40
+text = "BreakFast"
+
+[node name="Panel" type="Panel" parent="Breakfast"]
+z_index = 1
+layout_mode = 0
+offset_left = 36.0
+offset_top = 102.0
+offset_right = 300.0
+offset_bottom = 142.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_j6bm8")
+script = ExtResource("2_10u5y")
+
+[node name="Label" type="Label" parent="Breakfast/Panel"]
+layout_mode = 0
+offset_left = 29.0
+offset_top = -10.0
+offset_right = 147.0
+offset_bottom = 45.0
+theme_override_fonts/font = ExtResource("1_088ok")
+theme_override_font_sizes/font_size = 40
+text = "OatMeal - 5Xp"
+
+[node name="Button" type="Button" parent="Breakfast/Panel"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_right = 266.0
+offset_bottom = 39.0
+
+[node name="Panel5" type="Panel" parent="Breakfast"]
+z_index = 1
+layout_mode = 0
+offset_left = 34.0
+offset_top = 172.0
+offset_right = 368.0
+offset_bottom = 212.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_j6bm8")
+script = ExtResource("3_jknq3")
+
+[node name="Label" type="Label" parent="Breakfast/Panel5"]
+layout_mode = 0
+offset_left = 28.0
+offset_top = -12.0
+offset_right = 328.0
+offset_bottom = 48.0
+theme_override_fonts/font = ExtResource("1_088ok")
+theme_override_font_sizes/font_size = 40
+text = "Avocado Toast-10Xp"
+
+[node name="Button2" type="Button" parent="Breakfast/Panel5"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 5.0
+offset_top = 4.0
+offset_right = 334.0
+offset_bottom = 43.0
+
+[node name="Panel4" type="Panel" parent="Breakfast"]
+z_index = 1
+layout_mode = 0
+offset_left = 23.0
+offset_top = 298.0
+offset_right = 405.0
+offset_bottom = 351.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_j6bm8")
+script = ExtResource("4_44wgq")
+
+[node name="Button3" type="Button" parent="Breakfast/Panel4"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 25.0
+offset_top = -59.0
+offset_right = 354.0
+offset_bottom = -20.0
+
+[node name="Label" type="Label" parent="Breakfast/Panel4"]
+layout_mode = 0
+offset_left = 36.0
+offset_top = -4.0
+offset_right = 361.0
+offset_bottom = 51.0
+theme_override_fonts/font = ExtResource("1_088ok")
+theme_override_font_sizes/font_size = 40
+text = "Vegan Pancakes-20Xp"
+
+[node name="Panel3" type="Panel" parent="Breakfast"]
+z_index = 1
+layout_mode = 0
+offset_left = 28.0
+offset_top = 234.0
+offset_right = 392.0
+offset_bottom = 277.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_j6bm8")
+script = ExtResource("5_p0n7o")
+
+[node name="Label" type="Label" parent="Breakfast/Panel3"]
+layout_mode = 0
+offset_left = 31.0
+offset_top = -9.0
+offset_right = 239.0
+offset_bottom = 46.0
+theme_override_fonts/font = ExtResource("1_088ok")
+theme_override_font_sizes/font_size = 40
+text = "Smoothie Bowl-15Xp"
+
+[node name="Button4" type="Button" parent="Breakfast/Panel3"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 24.0
+offset_top = 6.0
+offset_right = 353.0
+offset_bottom = 45.0
+
+[node name="TextureRect" type="TextureRect" parent="Breakfast"]
+layout_mode = 0
+offset_left = 420.0
+offset_top = 42.0
+offset_right = 1045.0
+offset_bottom = 387.0
+texture = ExtResource("2_yi2bu")
+stretch_mode = 4
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+z_index = 10
+layout_mode = 0
+offset_left = 272.0
+offset_top = 264.0
+offset_right = 852.0
+offset_bottom = 332.0
+theme_override_colors/font_color = Color(0.9581006, 0.940194, 0.98276955, 1)
+theme_override_colors/font_outline_color = Color(0.92099476, 0.9209946, 0.9209946, 1)
+
+[node name="Label" type="Label" parent="ProgressBar"]
+z_index = 1
+layout_mode = 0
+offset_left = -58.0
+offset_top = 5.0
+offset_right = -3.0
+offset_bottom = 54.0
+theme_override_fonts/font = ExtResource("1_088ok")
+theme_override_font_sizes/font_size = 35
+text = "Xp-"
+
+[connection signal="pressed" from="Breakfast/Panel/Button" to="Breakfast/Panel" method="_on_button_pressed"]
+[connection signal="pressed" from="Breakfast/Panel5/Button2" to="Breakfast/Panel5" method="_on_button_2_pressed"]
+[connection signal="pressed" from="Breakfast/Panel4/Button3" to="Breakfast/Panel4" method="_on_button_3_pressed"]
+[connection signal="pressed" from="Breakfast/Panel4/Button3" to="Breakfast/Panel5" method="_on_button_2_pressed"]
+[connection signal="pressed" from="Breakfast/Panel3/Button4" to="Breakfast/Panel3" method="_on_button_4_pressed"]
+[connection signal="pressed" from="Breakfast/Panel3/Button4" to="Breakfast/Panel4" method="_on_button_3_pressed"]
+[connection signal="pressed" from="Breakfast/Panel3/Button4" to="Breakfast/Panel5" method="_on_button_2_pressed"]
