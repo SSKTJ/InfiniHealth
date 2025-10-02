@@ -1,0 +1,155 @@
+[gd_scene load_steps=15 format=3 uid="uid://uu478cbilud"]
+
+[ext_resource type="Texture2D" uid="uid://cofosw7vs514a" path="res://water_glass.png" id="1_d0xbv"]
+[ext_resource type="Script" uid="uid://bd68buuj0j7nv" path="res://water_button.gd" id="2_msvgi"]
+[ext_resource type="FontFile" uid="uid://epxobldh01i" path="res://font.ttf" id="2_p68ao"]
+[ext_resource type="Texture2D" uid="uid://dswf6qoho5fw7" path="res://user.png" id="4_lajfa"]
+[ext_resource type="Script" uid="uid://crunk8t2rekkj" path="res://profile_button.gd" id="5_qgr8x"]
+[ext_resource type="Texture2D" uid="uid://dcwuvwksg3cmy" path="res://home.png" id="6_ncv4p"]
+[ext_resource type="Script" uid="uid://lglrtgp44i16" path="res://home_button.gd" id="7_1vb8y"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p68ao"]
+bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qgr8x"]
+bg_color = Color(0, 0.447059, 0.756863, 1)
+corner_radius_top_left = 100
+corner_radius_top_right = 100
+corner_radius_bottom_right = 100
+corner_radius_bottom_left = 100
+shadow_color = Color(0, 0.34902, 0.447059, 0.6)
+shadow_size = 10
+shadow_offset = Vector2(0, 10)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_msvgi"]
+bg_color = Color(0, 0.447961, 0.755115, 1)
+corner_radius_top_left = 100
+corner_radius_top_right = 100
+corner_radius_bottom_right = 100
+corner_radius_bottom_left = 100
+shadow_color = Color(8.18223e-07, 0.34886, 0.448749, 0.6)
+shadow_size = 10
+shadow_offset = Vector2(0, 10)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1vb8y"]
+bg_color = Color(0, 0.447059, 0.756863, 1)
+corner_radius_top_left = 100
+corner_radius_top_right = 100
+corner_radius_bottom_right = 100
+corner_radius_bottom_left = 100
+shadow_color = Color(0, 0.34902, 0.447059, 0.6)
+shadow_size = 10
+shadow_offset = Vector2(0, 10)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jtcfm"]
+bg_color = Color(0.0941176, 0.701961, 1, 1)
+corner_radius_top_left = 100
+corner_radius_top_right = 100
+corner_radius_bottom_right = 100
+corner_radius_bottom_left = 100
+shadow_color = Color(3.46541e-06, 0.600678, 0.832062, 0.6)
+shadow_size = 10
+shadow_offset = Vector2(0, 10)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fdg0o"]
+bg_color = Color(0.777177, 0.777177, 0.777177, 1)
+corner_radius_top_left = 100
+corner_radius_top_right = 100
+corner_radius_bottom_right = 100
+corner_radius_bottom_left = 100
+shadow_color = Color(0.491583, 0.491583, 0.491583, 0.6)
+shadow_size = 10
+shadow_offset = Vector2(0, 10)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lajfa"]
+bg_color = Color(0.0941176, 0.701961, 1, 1)
+corner_radius_top_left = 100
+corner_radius_top_right = 100
+corner_radius_bottom_right = 100
+corner_radius_bottom_left = 100
+shadow_color = Color(0, 0.6, 0.831373, 0.6)
+shadow_size = 10
+shadow_offset = Vector2(0, 10)
+
+[node name="WaterScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MainPanel" type="Panel" parent="."]
+layout_mode = 0
+offset_right = 1080.0
+offset_bottom = 1920.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_p68ao")
+
+[node name="TextureRect" type="TextureRect" parent="MainPanel"]
+layout_mode = 0
+offset_left = 170.0
+offset_top = 142.0
+offset_right = 926.0
+offset_bottom = 1064.0
+texture = ExtResource("1_d0xbv")
+
+[node name="Button" type="Button" parent="MainPanel"]
+layout_mode = 0
+offset_left = 176.0
+offset_top = 1172.0
+offset_right = 930.0
+offset_bottom = 1344.0
+mouse_default_cursor_shape = 2
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_qgr8x")
+theme_override_styles/hover = SubResource("StyleBoxFlat_msvgi")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_1vb8y")
+theme_override_styles/normal = SubResource("StyleBoxFlat_jtcfm")
+script = ExtResource("2_msvgi")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MainPanel/Button"]
+layout_mode = 0
+offset_left = 74.0
+offset_top = 26.0
+offset_right = 810.0
+offset_bottom = 208.0
+mouse_filter = 1
+theme_override_fonts/normal_font = ExtResource("2_p68ao")
+theme_override_font_sizes/normal_font_size = 85
+text = "I have drunk water!"
+
+[node name="ProgressBar" type="ProgressBar" parent="MainPanel"]
+layout_mode = 0
+offset_left = 59.0
+offset_top = 1486.0
+offset_right = 1037.0
+offset_bottom = 1579.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_p68ao")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/background = SubResource("StyleBoxFlat_fdg0o")
+theme_override_styles/fill = SubResource("StyleBoxFlat_lajfa")
+
+[node name="ProfileButton" type="TextureButton" parent="MainPanel"]
+offset_left = 793.0
+offset_top = 1745.0
+offset_right = 1305.0
+offset_bottom = 2257.0
+scale = Vector2(0.3, 0.3)
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("4_lajfa")
+stretch_mode = 4
+script = ExtResource("5_qgr8x")
+
+[node name="HomeButton" type="TextureButton" parent="MainPanel"]
+offset_left = 127.0
+offset_top = 1733.0
+offset_right = 639.0
+offset_bottom = 2245.0
+scale = Vector2(0.3, 0.3)
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("6_ncv4p")
+script = ExtResource("7_1vb8y")
+
+[connection signal="pressed" from="MainPanel/Button" to="MainPanel/Button" method="_on_pressed"]
+[connection signal="pressed" from="MainPanel/ProfileButton" to="MainPanel/ProfileButton" method="_on_pressed"]
+[connection signal="pressed" from="MainPanel/HomeButton" to="MainPanel/HomeButton" method="_on_pressed"]
